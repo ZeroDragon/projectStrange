@@ -1,0 +1,5 @@
+.DS_Store
+oldstuff/
+data/
+node_modules/
+mise.local.toml
