@@ -1,5 +1,4 @@
-.DS_Store
 oldstuff/
 rom/
 node_modules/
-mise.local.toml
+.DS_Store
