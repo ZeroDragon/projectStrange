@@ -3,3 +3,4 @@ oldstuff/
 rom/
 node_modules/
 mise.local.toml
+dist/
