@@ -1,7 +1,7 @@
 # Project Structure
 
 ## Overview
-`doctorstrange` is a Vue 3 application built with Vite, using Pug for templates and Stylus for styling.
+`doctorstrange` is a Vue 3 application for loading and managing ROM databases. Built with Vite, using Pug for templates and Stylus for styling.
 
 ## Technology Stack
 - **Framework**: Vue 3
@@ -23,7 +23,7 @@ doctorstrange/
 │   ├── styles/            # Global styles
 │   │   └── variables.styl # Stylus variables (auto-imported)
 │   └── views/             # Page components
-│       └── Home.vue       # Home page component
+│       └── Home.vue       # ROM loading and management
 ├── index.html             # HTML entry point
 ├── package.json           # Project dependencies and scripts
 └── vite.config.js         # Vite configuration
@@ -34,6 +34,27 @@ doctorstrange/
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
+
+## Application Features
+
+### ROM Management System
+The system manages two ROM databases:
+- **BIOS**: Database loaded from CSV format (the old ROM)
+- **ROM**: Database loaded from CSV format (the new ROM)
+
+#### CSV Format
+- 6 columns (no headers)
+- All cells contain integers
+- One record per line
+
+#### Data Storage
+- Data is stored in `localStorage` as an array of arrays
+- Structure: `{ bios: [[col1, col2, col3, col4, col5, col6], ...], rom: [[col1, col2, col3, col4, col5, col6], ...] }`
+
+#### Operations
+- **Upload**: Load CSV files for both BIOS and ROM
+- **Persistence**: Data persists across sessions via localStorage
+- **Clear Memory**: Remove all data from memory and localStorage
 
 ## Configuration Details
 
