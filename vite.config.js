@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/projectStrange/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
